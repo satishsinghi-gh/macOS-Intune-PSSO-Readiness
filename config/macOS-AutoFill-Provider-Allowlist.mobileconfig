@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AllowedExtensions</key>
+			<array>
+				<string>com.microsoft.CompanyPortalMac.Mac-Autofill-Extension</string>
+			</array>
+			<key>DeniedExtensionPoints</key>
+			<array>
+				<string>com.apple.authentication-services-credential-provider-ui</string>
+			</array>
+			<key>PayloadDisplayName</key>
+			<string>AutoFill Credential Provider Allowlist</string>
+			<key>PayloadIdentifier</key>
+			<string>com.endpoint.autofill.allowlist.nsextension.8E06388F-C155-4892-8721-E294521F35B6</string>
+			<key>PayloadType</key>
+			<string>com.apple.NSExtension</string>
+			<key>PayloadUUID</key>
+			<string>8E06388F-C155-4892-8721-E294521F35B6</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>v1.0 - Author - Satish Singhi. Denies all AutoFill credential provider extensions except Company Portal (Platform Credential passkey). Apple Passwords is built in and not affected.</string>
+	<key>PayloadDisplayName</key>
+	<string>macOS - AutoFill Provider Allowlist</string>
+	<key>PayloadIdentifier</key>
+	<string>com.endpoint.autofill.allowlist.CD06F6E8-ADBC-427C-B0FE-F7D8363A7005</string>
+	<key>PayloadOrganization</key>
+	<string>Endpoint Engineering</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>CD06F6E8-ADBC-427C-B0FE-F7D8363A7005</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

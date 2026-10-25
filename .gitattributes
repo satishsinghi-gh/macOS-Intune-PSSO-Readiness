@@ -1,0 +1,8 @@
+# Keep Unix line endings for macOS resources (CRLF breaks zsh scripts)
+*.zsh           text eol=lf
+*.sh            text eol=lf
+*.mobileconfig  text eol=lf
+*.plist         text eol=lf
+*.md            text eol=lf
+LICENSE         text eol=lf
+*.png           binary
