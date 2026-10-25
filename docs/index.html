@@ -65,6 +65,9 @@
 
         .challenge { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem 1.5rem; margin: 1.25rem 0; }
         .challenge h3 { margin-top: 0; }
+        .shot { margin: 1.25rem auto 0.25rem; max-width: 560px; }
+        .shot img { width: 100%; border-radius: 8px; border: 1px solid #e5e7eb; display: block; }
+        .shot .cap { font-size: 0.8rem; color: #6b7280; text-align: center; margin-top: 0.5rem; }
 
         .refs li { margin-bottom: 0.4rem; }
         .cta { text-align: center; background: #0a2a57; color: #ffffff; border-radius: 10px; padding: 2.25rem 1.5rem; margin-top: 1rem; }
@@ -148,6 +151,10 @@
         <div class="challenge">
             <h3>1. Company Portal delay during enrollment</h3>
             <p>It is a known issue and I had to invent the fix. The answer is using <strong>Enrollment Time Grouping (ETG)</strong> and deploying only the <strong>Company Portal (LOB)</strong> app to this group. This is currently the only consistent way to ensure Company Portal wins the race against the PSSO registration workflow during enrollment (90% success). To achieve this, you need to migrate your supervised devices from the legacy enrollment profiles to the new enrollment policies.</p>
+            <div class="shot">
+                <a href="images/company-portal-enrollment-delay.jpg" title="Open full size"><img src="images/company-portal-enrollment-delay.jpg" alt="Setup Assistant error: Unable to Sign-In - This Mac does not have the necessary single sign-on application or extension. Contact your administrator to help get single sign-on set up."></a>
+                <p class="cap">What users see when Company Portal loses the race: Setup Assistant reports "Unable to Sign-In" because the SSO extension isn't installed yet.</p>
+            </div>
         </div>
 
         <div class="challenge">
