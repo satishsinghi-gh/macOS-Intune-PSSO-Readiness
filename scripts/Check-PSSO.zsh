@@ -1,11 +1,17 @@
 #!/bin/zsh
-# Copyright (c) Microsoft Corporation.
+# Copyright (c) Microsoft Corporation. (original sample)
+# Modifications Copyright (c) 2026 Satish Singhi
 # Licensed under the MIT License.
 #
-# Check-PSSO v2.5 (Recurring) - enable "AutoFill from Company Portal" after Platform SSO registration,
+# Check-PSSO v2.5.1 (Recurring) - enable "AutoFill from Company Portal" after Platform SSO registration,
 # optionally enforce the main AutoFill toggle and an AutoFill-provider allowlist.
 # Author - Satish Singhi
-# Based on: microsoft/shell-intune-samples "Set Autofill Automatically after PSSO Registration"
+# Based on: microsoft/shell-intune-samples "Set Autofill Automatically after PSSO Registration" (Check-PSSO.zsh)
+#   https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Config/Set%20Autofill%20Automatically%20after%20PSSO%20Registration
+#   pluginkit technique credited by Microsoft to Gauthier Bedard (Shared Services Canada).
+#
+# Changes vs v2.5: header only - copyright/attribution clarified (no functional change).
+#
 # Target: macOS 26 (Tahoe) and macOS 27 (Golden Gate). Runs on macOS 13+.
 #
 # Changes vs v2.4:
@@ -87,7 +93,7 @@ plist_val() { [[ -f "$2" ]] && /usr/libexec/PlistBuddy -c "Print :$1" "$2" 2>/de
 write_marker() { local m="$fingerprint"; [[ "$psso_ok" != true ]] && m="${fingerprint}|pre-psso"; printf '%s\n' "$m" > "$markerfile"; chmod 600 "$markerfile" 2>/dev/null; }
 is_allowed() { [[ "$1" == "$autofill_id" || "$1" == com.apple.* || ${EXTRA_ALLOWED[(Ie)$1]} -gt 0 ]]; }
 
-log "--- Check-PSSO v2.5 run start ---"
+log "--- Check-PSSO v2.5.1 run start ---"
 log "Console user: $currentUser (UID $currentUID) | state fingerprint: $fingerprint | enforce: $ENFORCE_MODE | enable before PSSO: $ENABLE_BEFORE_PSSO"
 
 # ===== 1. macOS version =====
